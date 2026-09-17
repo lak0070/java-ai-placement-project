@@ -19,6 +19,56 @@ A Java 17 console application that uses a normalized k-nearest-neighbours (k-NN)
 3. Recommendation generation
 4. Storage and report generation
 
+## Repository Structure
+
+```text
+java-ai-placement-project/
+├── data/
+│   └── training_data.csv
+├── src/
+│   ├── main/java/com/vityarthi/placement/
+│   │   ├── app/
+│   │   │   └── ConsoleApplication.java
+│   │   ├── exception/
+│   │   │   └── ValidationException.java
+│   │   ├── ml/
+│   │   │   ├── CsvDataLoader.java
+│   │   │   └── KnnClassifier.java
+│   │   ├── model/
+│   │   │   ├── PredictionResult.java
+│   │   │   ├── ReadinessLevel.java
+│   │   │   ├── StudentProfile.java
+│   │   │   └── TrainingExample.java
+│   │   ├── repository/
+│   │   │   └── AssessmentRepository.java
+│   │   ├── service/
+│   │   │   ├── PredictionService.java
+│   │   │   ├── RecommendationService.java
+│   │   │   └── ReportService.java
+│   │   └── validation/
+│   │       └── InputValidator.java
+│   └── test/java/com/vityarthi/placement/
+│       └── ProjectTests.java
+├── reports/
+│   └── Generated student reports
+├── .gitignore
+├── pom.xml
+├── README.md
+└── statement.md
+```
+
+### Package Responsibilities
+
+| Package | Responsibility |
+| --- | --- |
+| `app` | Starts the program and handles console interaction |
+| `ml` | Loads training data and performs k-NN classification |
+| `model` | Contains the application's data records and readiness levels |
+| `service` | Coordinates prediction, recommendations and report generation |
+| `repository` | Saves assessment history to CSV |
+| `validation` | Validates student input values |
+| `exception` | Provides application-specific validation errors |
+
 ## Requirements
 
 - JDK 17 or newer
