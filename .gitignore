@@ -1,0 +1,5 @@
+target/
+.idea/
+*.iml
+data/assessment_history.csv
+reports/*.txt
